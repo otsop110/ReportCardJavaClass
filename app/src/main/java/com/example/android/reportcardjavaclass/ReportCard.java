@@ -4,33 +4,43 @@ package com.example.android.reportcardjavaclass;
  * Created by Tarja on January 8, 2017
  */
 public class ReportCard {
-    private String mStudentName;
-    private int mCourseID;
-    private double mGrade;
+    private String StudentName;
+    private int CourseID;
+    private double Grade;
 
     // default constructor
     public ReportCard(String studentName) {
-        mStudentName = studentName;
+        this.StudentName = studentName;
+
     }
-    // Method to set grade to the course
+
+    // Set grade for a course
     public void setCourseGrade(int courseID, double grade) {
-        mCourseID = courseID;
-        mGrade = grade;
+        this.CourseID = courseID;
+        this.Grade = grade;
     }
+
     // Getter for Student name
     public String getStudentName() {
-        return mStudentName;
+        return StudentName;
     }
     //Getter for CourseID
     public int getCourseID() {
-        return mCourseID;
+        return CourseID;
     }
     //Getter for Grade
     public double getGrade() {
-        return mGrade;
+        return Grade;
     }
     //Print to string
+
+    @Override
     public String toString() {
-        return "Report card of: " + getStudentName() + "\nCourse: " + getCourseID() + "\nGrade: " + getGrade();
+        return "ReportCard{" +
+                "StudentName='" + StudentName + '\'' +
+                ", CourseID=" + CourseID +
+                ", Grade=" + Grade +
+                '}';
     }
+
 }
